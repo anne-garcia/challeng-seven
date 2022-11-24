@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('partials/head.ejs', { head }); -%>
+
+<body>
+    <h1 class="alignCentre">HOME</h1>
+
+    <%- include('partials/nav.ejs'); -%>
+
+    <div>Random cat breed: <%= body.randBreed.breed %></div>
+    <img src="<%= body.randBreed.image %>" />
+    <% for(const key in body.randBreed) { %>
+    <div><%= key %>: <%= body.randBreed[key] %></div>
+    <% } %>
+    <div>Random cat fact: <%= body.randFact.fact %></div>
+</body>
+</html>
